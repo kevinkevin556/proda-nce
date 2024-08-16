@@ -1,0 +1,8 @@
+monai[pydicom]==1.0.1
+ruamel.yaml==0.18.6
+tqdm==4.66.5
+loguru==0.7.2
+tensorboard==2.17.1 
+dicom2nifti==2.4.11
+opencv-python==4.10.0.84
+jsonargparse[omegaconf]==4.32.0
