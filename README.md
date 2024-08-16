@@ -4,10 +4,8 @@
 
 This repository is the PyTorch implementation of [Cross-modality Segmentation Model with Incomplete Annotations for Multiorgan Medical Image Analysis](https://arxiv.org/abs/2030.12345). 
 
-<div class="row" style="display: flex; align-items: center">
-  <div class="column" style="flex: 50%;"> <img src="images/position.svg"></div>
-  <div class="column" style="flex: 50%; padding-left:20px"> <img src="images/concept.svg"></div>
-</div>
+
+<p float="left"> <img src="images/position.svg" width="50%"/><img src="images/concept.svg" width="50%"/> </p>
 
 
 ## Abstract
@@ -17,11 +15,8 @@ A two-stage approach is introduced, combining pixel-level alignment via CycleGAN
 
 The framework is evaluated on a private abdominal CT and MRI dataset for segmenting subcutaneous adipose tissue, skeletal muscle, and visceral adipose tissue. Results demonstrate superior performance compared to existing domain adaptation methods, especially for unlabeled organs. The proposed approach outperforms CycleGAN, CyCADA, and AdaptSegNet baselines, showcasing the effectiveness of the ProdaNCE loss in handling both domain shift and incomplete annotations.
 
-<div class="row" style="display: flex; align-items: center">
-  <div class="column" style="flex: 50%;"> <img src="images/arch.svg"></div>
-  <div class="column" style="flex: 50%; padding-left:20px"> <img src="images/prodaNCE.svg"></div>
-</div>
 
+<p float="left"> <img src="images/arch.svg" width="41%"/> &nbsp;&nbsp;&nbsp; <img src="images/ProdaNCE.svg" width="56%"/> </p>
 
 ## Installation
 1. Create an environment of Python 3.9 with `jupyter`, `pandas`, and  `matplotlib` installed
@@ -48,24 +43,18 @@ python train.py --config config/train.yml
 To evaluate the model, run:
 
 ```eval
-python test.py --config config/test.yml --pretrained <checkpoint_dir> --evaluator <dice/hausforff/image/all>
+python test.py --config config/test.yml --pretrained <checkpoint_dir> --evaluator <dice/hausdorff/image/all>
 ```
 
 ## Results
 
+### Incomplete Annotation + Domain Adaptation
+<p float="left"> <img src="images/sce1-mri.svg" width="45%"/> &nbsp;&nbsp;&nbsp; <img src="images/sce1-ct.svg" width="45%"/> </p>
 
-#### Incomplete Annotation + Domain Adaptation
 
- <div class="row" style="display: flex; align-items: center">
-  <div class="column" style="flex: 50%;"> <img src="images/sce1-mri.svg"></div>
-  <div class="column" style="flex: 50%; padding-left:20px"> <img src="images/sce1-ct.svg"></div>
-</div>
+### Domain Adaptation
+<p float="left"> <img src="images/sce3-mri.svg" width="45%"/> &nbsp;&nbsp;&nbsp;  </p>
 
-#### Domain Adaptation
- <div class="row" style="display: flex; align-items: center">
-  <div class="column" style="flex: 50%;"> <img src="images/sce3-mri.svg"></div>
-  <div class="column" style="flex: 50%; padding-left:20px"> </div>
-</div>
 
 
 
